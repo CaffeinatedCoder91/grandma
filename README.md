@@ -70,17 +70,15 @@ Then open:
 http://localhost:3000
 ```
 
-## RSVP Integration Options
+## RSVP Integration
 
-The first version can show an on-page thank-you without sending data. For a real RSVP flow, choose one:
+RSVP submissions are sent to Formspree. Create a Formspree form, then add its endpoint to `.env.local`:
 
-- Next.js API route sending email
-- Google Forms or Google Sheets webhook
-- Airtable form endpoint
-- Supabase table
-- Formspree, Basin, or Netlify Forms
+```bash
+NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+```
 
-The UI should not need to change when the submit adapter is swapped.
+The form keeps its on-page validation and thank-you state; Formspree handles delivery and notification emails.
 
 ## Visual Fidelity Checklist
 
@@ -93,4 +91,3 @@ The UI should not need to change when the submit adapter is swapped.
 - RSVP choices are accessible, keyboard-friendly, and visibly selected.
 - Thank-you state appears after valid submit.
 - Reduced motion users are not forced through entrance animation.
-

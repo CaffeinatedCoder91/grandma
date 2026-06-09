@@ -14,7 +14,6 @@ import {
   Input,
   Label,
   NameRow,
-  Note,
   OptionalSuffix,
   Panel,
   Section,
@@ -124,9 +123,6 @@ export function RsvpForm() {
           <ThankYou firstName={firstName} attend={attend} count={count} />
         </Panel>
 
-        <Note>
-          Please reply by the 19th of June so we may set a place for you.
-        </Note>
       </Section>
     );
   }

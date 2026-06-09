@@ -22,12 +22,6 @@ const Copy = styled.p`
   text-wrap: pretty;
 `;
 
-const Accent = styled.span`
-  color: ${({ theme }) => theme.colors.rose};
-  font-family: ${({ theme }) => theme.fonts.serif};
-  font-style: italic;
-`;
-
 export function DressCodeSection({ copy }: { copy: string }) {
   return (
     <Note>
