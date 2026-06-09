@@ -1,0 +1,20 @@
+export const tokens = {
+  colors: {
+    pageBg: "#FDF6F0",
+    cream: "#FAF0E6",
+    creamDeep: "#F5E6D3",
+    ivory: "#EDD9C0",
+    ivoryLine: "#DEC5A8",
+    cardSurface: "#FFFAF5",
+    portraitBorder: "#FFF8F2",
+    rose: "#C4512A",
+    roseBright: "#D4623A",
+    rosePressed: "#A8431F",
+    roseMist: "rgba(196,81,42,0.10)",
+    sage: "#8FAF7E",
+    sageDeep: "#5E8A4A",
+    ink: "#2D1F0E",
+    inkSoft: "#5C3D1E",
+    inkFaint: "#9C7A5A",
+  },
+} as const;
