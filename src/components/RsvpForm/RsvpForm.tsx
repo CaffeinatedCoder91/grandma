@@ -36,6 +36,7 @@ export function RsvpForm() {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
+  const [submitError, setSubmitError] = useState(false);
 
   const firstNameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
@@ -103,8 +104,13 @@ export function RsvpForm() {
       message,
     };
 
-    await submitRsvp(rsvpData);
-    setSubmitted(true);
+    try {
+      await submitRsvp(rsvpData);
+      setSubmitted(true);
+      setSubmitError(false);
+    } catch {
+      setSubmitError(true);
+    }
   };
 
   if (submitted && attend) {
@@ -119,7 +125,7 @@ export function RsvpForm() {
         </Panel>
 
         <Note>
-          Please reply by the 20th of June so we may set a place for you.
+          Please reply by the 19th of June so we may set a place for you.
         </Note>
       </Section>
     );
@@ -194,12 +200,14 @@ export function RsvpForm() {
           </Field>
 
           <SubmitButton type="submit">Send My Reply</SubmitButton>
+          {submitError && (
+            <FieldError>
+              Something went wrong — please email us directly.
+            </FieldError>
+          )}
         </FormGrid>
       </Panel>
 
-      <Note>
-        Please reply by the 20th of June so we may set a place for you.
-      </Note>
     </Section>
   );
 }

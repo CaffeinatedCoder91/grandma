@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import styled from "styled-components";
 import { FloralOrnament } from "./FloralOrnament";
 import { Eyebrow } from "./SectionHeading";
@@ -27,10 +26,10 @@ const OrnamentWrap = styled.div`
 `;
 
 const PortraitWrap = styled.div`
-  height: 296px;
+  height: 380px;
   margin: 44px auto 4px;
   position: relative;
-  width: 296px;
+  width: 380px;
 
   &::before {
     content: "";
@@ -47,8 +46,8 @@ const PortraitWrap = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    height: 238px;
-    width: 238px;
+    height: 300px;
+    width: 300px;
   }
 `;
 
@@ -76,32 +75,30 @@ const PortraitFrame = styled.div`
   font-family: ${({ theme }) => theme.fonts.serif};
   font-size: 20px;
   font-style: italic;
-  height: 296px;
+  height: 380px;
   justify-content: center;
   overflow: hidden;
   position: relative;
-  width: 296px;
+  width: 380px;
   z-index: 1;
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    height: 238px;
-    width: 238px;
+    height: 300px;
+    width: 300px;
   }
 `;
 
-const PortraitImage = styled.img<{ $loaded: boolean }>`
+const PortraitImage = styled.img`
   display: block;
-  height: 296px;
+  height: 380px;
   object-fit: cover;
-  opacity: ${({ $loaded }) => ($loaded ? 1 : 0)};
   position: absolute;
   inset: 0;
-  transition: opacity 0.2s ease;
-  width: 296px;
+  width: 380px;
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    height: 238px;
-    width: 238px;
+    height: 300px;
+    width: 300px;
   }
 `;
 
@@ -147,8 +144,6 @@ const Tribute = styled.p`
 `;
 
 export function HeroSection({ person }: { person: Person }) {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
   return (
     <Hero>
       <OrnamentWrap>
@@ -160,16 +155,14 @@ export function HeroSection({ person }: { person: Person }) {
         <PortraitRing $outer />
         <PortraitRing />
         <PortraitFrame>
-          <Placeholder>Add her photo</Placeholder>
           {person.portraitSrc ? (
             <PortraitImage
               src={person.portraitSrc}
               alt={`Portrait of ${person.fullName}`}
-              $loaded={imageLoaded}
-              onLoad={() => setImageLoaded(true)}
-              onError={() => setImageLoaded(false)}
             />
-          ) : null}
+          ) : (
+            <Placeholder>Add her photo</Placeholder>
+          )}
         </PortraitFrame>
       </PortraitWrap>
 

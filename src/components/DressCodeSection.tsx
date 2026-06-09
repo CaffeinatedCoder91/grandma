@@ -29,19 +29,12 @@ const Accent = styled.span`
 `;
 
 export function DressCodeSection({ copy }: { copy: string }) {
-  const accent = "gentle tones";
-  const [before, after] = copy.split(accent);
-
   return (
     <Note>
       <Eyebrow>A Gentle Note</Eyebrow>
       <SectionTitle>Dress Code</SectionTitle>
       <HairlineRule />
-      <Copy>
-        {before}
-        <Accent>{accent}</Accent>
-        {after}
-      </Copy>
+      <Copy>{copy}</Copy>
     </Note>
   );
 }
