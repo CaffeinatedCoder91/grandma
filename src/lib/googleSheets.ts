@@ -47,11 +47,26 @@
  *
  *     return ContentService.createTextOutput(
  *       JSON.stringify({ result: 'success' })
- *     ).setMimeType(ContentService.MimeType.JSON);
+ *     )
+ *       .setMimeType(ContentService.MimeType.JSON)
+ *       .addHeader('Access-Control-Allow-Origin', '*')
+ *       .addHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
+ *       .addHeader('Access-Control-Allow-Headers', 'Content-Type');
  *   } catch (error) {
  *     return ContentService.createTextOutput(
  *       JSON.stringify({ result: 'error', message: error.toString() })
- *     ).setMimeType(ContentService.MimeType.JSON);
+ *     )
+ *       .setMimeType(ContentService.MimeType.JSON)
+ *       .addHeader('Access-Control-Allow-Origin', '*')
+ *       .addHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
+ *       .addHeader('Access-Control-Allow-Headers', 'Content-Type');
  *   }
+ * }
+ *
+ * function doOptions(e) {
+ *   return ContentService.createTextOutput('')
+ *     .addHeader('Access-Control-Allow-Origin', '*')
+ *     .addHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
+ *     .addHeader('Access-Control-Allow-Headers', 'Content-Type');
  * }
  */
