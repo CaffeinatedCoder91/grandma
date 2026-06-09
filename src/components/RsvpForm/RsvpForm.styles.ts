@@ -3,10 +3,10 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: ${({ theme }) => theme.layout.sectionPadding} 0;
+  padding: ${({ theme }) => theme.layout.sectionPadding} ${({ theme }) => theme.layout.pagePadding};
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    padding: ${({ theme }) => theme.layout.mobileSectionPadding} 0;
+    padding: ${({ theme }) => theme.layout.mobileSectionPadding} ${({ theme }) => theme.layout.pagePadding};
   }
 `;
 
@@ -23,6 +23,8 @@ export const Panel = styled.div`
   max-width: 520px;
   padding: 44px 40px 48px;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 
   &::before {
     background: linear-gradient(
