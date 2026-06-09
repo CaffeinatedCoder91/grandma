@@ -7,6 +7,10 @@ export const StepperWrapper = styled.div`
   align-items: center;
   gap: 16px;
   width: fit-content;
+
+  @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
+    margin: 0 auto;
+  }
 `;
 
 export const StepperButton = styled.button`

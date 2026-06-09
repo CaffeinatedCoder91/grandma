@@ -37,7 +37,7 @@ export function Stepper({
         type="button"
         onClick={handleDecrement}
         disabled={value <= min}
-        aria-label="Decrease attendee count"
+        aria-label="Fewer attendees"
       >
         −
       </StepperButton>
@@ -48,7 +48,7 @@ export function Stepper({
         type="button"
         onClick={handleIncrement}
         disabled={value >= max}
-        aria-label="Increase attendee count"
+        aria-label="More attendees"
       >
         +
       </StepperButton>

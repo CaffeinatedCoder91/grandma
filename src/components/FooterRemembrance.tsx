@@ -8,9 +8,13 @@ type Person = MemorialContent["person"];
 type Footer = MemorialContent["footer"];
 
 const FooterWrap = styled.footer`
-  padding: 60px 0 64px;
+  padding: 64px 0;
   position: relative;
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
+    padding: 50px 0;
+  }
 `;
 
 const OrnamentWrap = styled.div`

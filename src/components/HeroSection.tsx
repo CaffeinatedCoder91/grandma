@@ -14,7 +14,7 @@ const Hero = styled.header`
   text-align: center;
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    padding: 50px 0;
+    padding: 56px 0;
   }
 `;
 
@@ -91,13 +91,18 @@ const PortraitFrame = styled.div`
 
 const PortraitImage = styled.img<{ $loaded: boolean }>`
   display: block;
-  height: 100%;
+  height: 296px;
   object-fit: cover;
   opacity: ${({ $loaded }) => ($loaded ? 1 : 0)};
   position: absolute;
   inset: 0;
   transition: opacity 0.2s ease;
-  width: 100%;
+  width: 296px;
+
+  @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
+    height: 238px;
+    width: 238px;
+  }
 `;
 
 const Placeholder = styled.span`
