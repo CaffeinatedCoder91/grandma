@@ -44,7 +44,7 @@ export const Panel = styled.div`
   }
 `;
 
-export const FormGrid = styled.div`
+export const FormGrid = styled.form`
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -84,8 +84,10 @@ export const OptionalSuffix = styled.span`
   text-transform: none;
 `;
 
-export const Input = styled.input`
-  border: 1px solid ${({ theme }) => theme.colors.ivoryLine};
+export const Input = styled.input<{ $error?: boolean }>`
+  border: 1px solid
+    ${({ $error, theme }) =>
+      $error ? theme.colors.rose : theme.colors.ivoryLine};
   border-radius: ${({ theme }) => theme.radii.input};
   color: ${({ theme }) => theme.colors.ink};
   font-family: ${({ theme }) => theme.fonts.sans};
@@ -98,12 +100,37 @@ export const Input = styled.input`
     box-shadow: 0 0 0 4px ${({ theme }) => theme.colors.roseMist};
     outline: none;
   }
+
+  ${({ $error, theme }) =>
+    $error &&
+    `
+    box-shadow: 0 0 0 3px ${theme.colors.roseMist};
+  `}
 `;
 
 export const ChoicesGrid = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const ChoicesGridWrapper = styled.div<{ $error?: boolean }>`
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  padding: ${({ $error }) => ($error ? "12px" : "0")};
+  border-radius: ${({ theme }) => theme.radii.input};
+  transition: all 0.2s;
+
+  ${({ $error, theme }) =>
+    $error &&
+    `
+    box-shadow: 0 0 0 3px ${theme.colors.roseMist};
+  `}
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
     grid-template-columns: 1fr;
@@ -137,8 +164,18 @@ export const ChoiceButton = styled.button<{ $selected: boolean }>`
   }
 `;
 
-export const Textarea = styled.textarea`
-  border: 1px solid ${({ theme }) => theme.colors.ivoryLine};
+export const FieldError = styled.div`
+  color: ${({ theme }) => theme.colors.rose};
+  font-family: ${({ theme }) => theme.fonts.sans};
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+`;
+
+export const Textarea = styled.textarea<{ $error?: boolean }>`
+  border: 1px solid
+    ${({ $error, theme }) =>
+      $error ? theme.colors.rose : theme.colors.ivoryLine};
   border-radius: ${({ theme }) => theme.radii.input};
   color: ${({ theme }) => theme.colors.ink};
   font-family: ${({ theme }) => theme.fonts.sans};
@@ -153,6 +190,12 @@ export const Textarea = styled.textarea`
     box-shadow: 0 0 0 4px ${({ theme }) => theme.colors.roseMist};
     outline: none;
   }
+
+  ${({ $error, theme }) =>
+    $error &&
+    `
+    box-shadow: 0 0 0 3px ${theme.colors.roseMist};
+  `}
 `;
 
 export const SubmitButton = styled.button`
