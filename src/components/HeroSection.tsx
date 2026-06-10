@@ -26,10 +26,10 @@ const OrnamentWrap = styled.div`
 `;
 
 const PortraitWrap = styled.div`
-  height: 380px;
+  height: 650px;
   margin: 44px auto 4px;
   position: relative;
-  width: 380px;
+  width: 550px;
 
   &::before {
     content: "";
@@ -46,59 +46,42 @@ const PortraitWrap = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    height: 300px;
-    width: 300px;
+    height: 380px;
+    width: 380px;
   }
-`;
-
-const PortraitRing = styled.span<{ $outer?: boolean }>`
-  position: absolute;
-  inset: ${({ $outer }) => ($outer ? "-30px" : "-16px")};
-  border: 1px solid
-    ${({ $outer, theme }) =>
-      $outer ? "rgba(139, 26, 47, 0.20)" : theme.colors.ivoryLine};
-  border-radius: 50%;
 `;
 
 const PortraitFrame = styled.div`
   align-items: center;
-  background: linear-gradient(
-    145deg,
-    ${({ theme }) => theme.colors.cream},
-    ${({ theme }) => theme.colors.ivory}
-  );
-  border: 8px solid ${({ theme }) => theme.colors.portraitBorder};
-  border-radius: 50%;
-  box-shadow: ${({ theme }) => theme.shadows.portrait};
   color: ${({ theme }) => theme.colors.inkFaint};
   display: flex;
   font-family: ${({ theme }) => theme.fonts.serif};
   font-size: 20px;
   font-style: italic;
-  height: 380px;
+  height: 650px;
   justify-content: center;
   overflow: hidden;
   position: relative;
-  width: 380px;
+  width: 550px;
   z-index: 1;
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    height: 300px;
-    width: 300px;
+    height: 380px;
+    width: 380px;
   }
 `;
 
 const PortraitImage = styled.img`
   display: block;
-  height: 380px;
-  object-fit: cover;
+  height: 650px;
+  object-fit: contain;
   position: absolute;
   inset: 0;
-  width: 380px;
+  width: 550px;
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    height: 300px;
-    width: 300px;
+    height: 380px;
+    width: 380px;
   }
 `;
 
@@ -152,8 +135,6 @@ export function HeroSection({ person }: { person: Person }) {
       <Eyebrow>In Loving Memory</Eyebrow>
 
       <PortraitWrap>
-        <PortraitRing $outer />
-        <PortraitRing />
         <PortraitFrame>
           {person.portraitSrc ? (
             <PortraitImage

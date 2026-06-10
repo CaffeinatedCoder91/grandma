@@ -1,0 +1,73 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - paragraph [ref=e9]: In Loving Memory
+    - img "Portrait of Maseline Joseph" [ref=e12]
+    - heading "Maseline Joseph" [level=1] [ref=e13]:
+      - generic [ref=e14]: Maseline
+      - text: Joseph
+    - paragraph [ref=e15]: 1938 ✧ 2026
+    - paragraph [ref=e16]: A gentle soul who filled every room with warmth, laughter and love
+  - generic [ref=e17]:
+    - paragraph [ref=e18]: Join Us
+    - heading "Service & Gathering" [level=2] [ref=e19]
+    - generic [ref=e21]:
+      - article [ref=e22]:
+        - paragraph [ref=e23]: Funeral Service
+        - heading "A Celebration of Her Life" [level=3] [ref=e24]
+        - generic [ref=e27]:
+          - generic [ref=e28]: Date
+          - generic [ref=e29]: Monday, 30 June 2026
+        - generic [ref=e32]:
+          - generic [ref=e33]: Time
+          - generic [ref=e34]: 1:00 in the afternoon
+        - generic [ref=e37]:
+          - generic [ref=e38]: Location
+          - generic [ref=e39]:
+            - text: Mortlake Cemetery Chapel
+            - generic [ref=e40]: Mortlake, London
+      - article [ref=e41]:
+        - paragraph [ref=e42]: Reception After
+        - heading "Tea & Remembrance" [level=3] [ref=e43]
+        - generic [ref=e46]:
+          - generic [ref=e47]: Date
+          - generic [ref=e48]: Monday, 30 June 2026
+        - generic [ref=e51]:
+          - generic [ref=e52]: Time
+          - generic [ref=e53]: 3:00 in the afternoon
+        - generic [ref=e56]:
+          - generic [ref=e57]: Location
+          - generic [ref=e58]:
+            - text: Reception
+            - generic [ref=e59]: 70 Oxberry Avenue, sw6 5ss
+  - generic [ref=e60]:
+    - paragraph [ref=e61]: A Gentle Note
+    - heading "Dress Code" [level=2] [ref=e62]
+    - paragraph [ref=e64]: Please note formal black funeral attire is not necessary
+  - generic [ref=e65]:
+    - paragraph [ref=e66]: Kindly Reply
+    - heading "Let Us Know You’ll Be There" [level=2] [ref=e67]
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]: First Name
+          - textbox "First Name" [ref=e74]:
+            - /placeholder: ""
+        - generic [ref=e75]:
+          - generic [ref=e76]: Last Name
+          - textbox "Last Name" [ref=e77]:
+            - /placeholder: ""
+      - generic [ref=e78]:
+        - generic [ref=e79]: Will You Join Us?
+        - radiogroup "Will you join us?" [ref=e80]:
+          - radio "The funeral service" [ref=e81] [cursor=pointer]
+          - radio "The reception" [ref=e82] [cursor=pointer]
+          - radio "Both, gladly" [ref=e83] [cursor=pointer]
+          - radio "Sadly, I can't attend" [ref=e84] [cursor=pointer]
+      - generic [ref=e85]:
+        - generic [ref=e86]: Message (Optional)
+        - textbox "Message (Optional)" [ref=e87]:
+          - /placeholder: Share your thoughts and memories...
+      - button "Send My Reply" [ref=e88] [cursor=pointer]
+  - generic [ref=e89]:
+    - paragraph [ref=e95]: Forever Loved
+    - paragraph [ref=e96]: Maseline Joseph · 1938 — 2026
