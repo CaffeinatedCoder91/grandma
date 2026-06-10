@@ -21,6 +21,7 @@ export const Panel = styled.div`
   box-shadow: ${({ theme }) => theme.shadows.rsvpPanel};
   margin: 44px auto 0;
   max-width: 520px;
+  overflow: hidden;
   padding: 44px 40px 48px;
   position: relative;
   width: 100%;

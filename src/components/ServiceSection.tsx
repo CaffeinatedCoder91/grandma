@@ -111,35 +111,53 @@ const SubLine = styled.span`
   font-size: 14px;
 `;
 
+const Description = styled.p`
+  color: ${({ theme }) => theme.colors.inkSoft};
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 18px 0 0;
+`;
+
 function ServiceCard({ details }: { details: ServiceDetails }) {
   return (
     <Card>
       <Kicker>{details.label}</Kicker>
       <CardTitle>{details.title}</CardTitle>
-      <Detail>
-        <IconDot />
-        <div>
-          <DetailLabel>Date</DetailLabel>
-          <DetailValue>{details.date}</DetailValue>
-        </div>
-      </Detail>
-      <Detail>
-        <IconDot />
-        <div>
-          <DetailLabel>Time</DetailLabel>
-          <DetailValue>{details.time}</DetailValue>
-        </div>
-      </Detail>
-      <Detail>
-        <IconDot $sage />
-        <div>
-          <DetailLabel>Location</DetailLabel>
-          <DetailValue>
-            {details.location}
-            <SubLine>{details.address}</SubLine>
-          </DetailValue>
-        </div>
-      </Detail>
+      {"date" in details && details.date && (
+        <Detail>
+          <IconDot />
+          <div>
+            <DetailLabel>Date</DetailLabel>
+            <DetailValue>{details.date}</DetailValue>
+          </div>
+        </Detail>
+      )}
+      {"time" in details && details.time && (
+        <Detail>
+          <IconDot />
+          <div>
+            <DetailLabel>Time</DetailLabel>
+            <DetailValue>{details.time}</DetailValue>
+          </div>
+        </Detail>
+      )}
+      {"location" in details && details.location && (
+        <Detail>
+          <IconDot $sage />
+          <div>
+            <DetailLabel>Location</DetailLabel>
+            <DetailValue>
+              {details.location}
+              {("address" in details && details.address) && (
+                <SubLine>{details.address}</SubLine>
+              )}
+            </DetailValue>
+          </div>
+        </Detail>
+      )}
+      {"description" in details && details.description && (
+        <Description>{details.description}</Description>
+      )}
     </Card>
   );
 }

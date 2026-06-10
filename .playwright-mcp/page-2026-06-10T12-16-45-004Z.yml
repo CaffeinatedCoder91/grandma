@@ -1,0 +1,94 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e9]: In Loving Memory
+      - img "Portrait of Maseline Joseph" [ref=e12]
+      - heading "Maseline Joseph" [level=1] [ref=e13]:
+        - generic [ref=e14]: Maseline
+        - text: Joseph
+      - paragraph [ref=e15]: 1938 ✧ 2026
+      - paragraph [ref=e16]: A gentle soul who filled every room with warmth, laughter and love
+    - generic [ref=e17]:
+      - paragraph [ref=e18]: Join Us
+      - heading "Service & Gathering" [level=2] [ref=e19]
+      - generic [ref=e21]:
+        - article [ref=e22]:
+          - paragraph [ref=e23]: Funeral Service
+          - heading "A Celebration of Her Life" [level=3] [ref=e24]
+          - generic [ref=e27]:
+            - generic [ref=e28]: Date
+            - generic [ref=e29]: Monday, 30 June 2026
+          - generic [ref=e32]:
+            - generic [ref=e33]: Time
+            - generic [ref=e34]: 1:00 in the afternoon
+          - generic [ref=e37]:
+            - generic [ref=e38]: Location
+            - generic [ref=e39]:
+              - text: Mortlake Cemetery Chapel
+              - generic [ref=e40]: Mortlake, London
+        - article [ref=e41]:
+          - paragraph [ref=e42]: Reception After
+          - heading "Remembrance" [level=3] [ref=e43]
+          - generic [ref=e46]:
+            - generic [ref=e47]: Date
+            - generic [ref=e48]: Monday, 30 June 2026
+          - generic [ref=e51]:
+            - generic [ref=e52]: Time
+            - generic [ref=e53]: 3:00 in the afternoon
+          - generic [ref=e56]:
+            - generic [ref=e57]: Location
+            - generic [ref=e58]:
+              - text: Reception
+              - generic [ref=e59]: 70 Oxberry Avenue, sw6 5ss
+          - paragraph [ref=e60]: Following the service, you are invited to join us for refreshments at a local venue (details will be shared here once confirmed).
+    - generic [ref=e61]:
+      - paragraph [ref=e62]: Find Us
+      - heading "Service Location" [level=2] [ref=e63]
+      - article [ref=e66]:
+        - paragraph [ref=e67]: Venue
+        - paragraph [ref=e68]: Mortlake Cemetery
+        - heading "Address" [level=4] [ref=e69]
+        - paragraph [ref=e70]: Clifford Avenue, London SW14 7BU
+        - heading "Directions" [level=4] [ref=e71]
+        - paragraph [ref=e72]: Mortlake Cemetery is located on the Clifford Avenue A316 which runs from Richmond to Chiswick Bridge. Please note that this is the only entrance in operation, there is no access from Mortlake Rd A205.
+        - paragraph [ref=e73]: "From Richmond / M3 / A316: drive along the Lower Richmond Road A316 towards Chiswick, at Chalkers Corner go straight across at the junction with Mortlake Rd A205. The entrance to the cemetery is on the left before you reach Chiswick Bridge."
+        - paragraph [ref=e74]: "From Chiswick / M4 / A4 / A316: drive along the Great Chertsey Road A316 towards Richmond, after you cross Chiswick Bridge, the entrance to the cemetery will be on your right."
+        - paragraph [ref=e75]: "Ultra Low Emission Zone (ULEZ): Please note that Mortlake Cemetery falls within the ULEZ charging zone (you can check your vehicle's compliance status here)."
+        - heading "Public Transport" [level=4] [ref=e76]
+        - generic [ref=e77]: "Nearest Tube: Kew Gardens (District Line) – approx 10 mins walk"
+        - generic [ref=e78]: "Bus: 190, 419"
+        - generic [ref=e79]: "National Rail: Mortlake (approx 10 mins walk)"
+    - generic [ref=e80]:
+      - paragraph [ref=e81]: A Gentle Note
+      - heading "Dress Code" [level=2] [ref=e82]
+      - paragraph [ref=e84]: Please note formal black funeral attire is not necessary
+    - generic [ref=e85]:
+      - paragraph [ref=e86]: Kindly Reply
+      - heading "Let Us Know You’ll Be There" [level=2] [ref=e87]
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]: First Name
+            - textbox "First Name" [ref=e94]:
+              - /placeholder: ""
+          - generic [ref=e95]:
+            - generic [ref=e96]: Last Name
+            - textbox "Last Name" [ref=e97]:
+              - /placeholder: ""
+        - generic [ref=e98]:
+          - generic [ref=e99]: Will You Join Us?
+          - radiogroup "Will you join us?" [ref=e100]:
+            - radio "The funeral service" [ref=e101] [cursor=pointer]
+            - radio "The reception" [ref=e102] [cursor=pointer]
+            - radio "Both, gladly" [ref=e103] [cursor=pointer]
+            - radio "Sadly, I can't attend" [ref=e104] [cursor=pointer]
+        - generic [ref=e105]:
+          - generic [ref=e106]: Message (Optional)
+          - textbox "Message (Optional)" [ref=e107]:
+            - /placeholder: Share your thoughts and memories...
+        - button "Send My Reply" [ref=e108] [cursor=pointer]
+    - generic [ref=e109]:
+      - paragraph [ref=e115]: Forever Loved
+      - paragraph [ref=e116]: Maseline Joseph · 1938 — 2026
+  - button "Open Next.js Dev Tools" [ref=e122] [cursor=pointer]:
+    - img [ref=e123]
