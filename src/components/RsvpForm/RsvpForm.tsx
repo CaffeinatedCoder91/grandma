@@ -8,6 +8,7 @@ import { AttendanceToggle } from "./AttendanceToggle";
 import { Stepper } from "./Stepper";
 import { ThankYou } from "./ThankYou";
 import {
+  ContactRow,
   Field,
   FieldError,
   FormGrid,
@@ -30,6 +31,8 @@ interface FormErrors {
 export function RsvpForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [attend, setAttend] = useState<AttendValue | null>(null);
   const [count, setCount] = useState(1);
   const [message, setMessage] = useState("");
@@ -98,6 +101,8 @@ export function RsvpForm() {
     const rsvpData: RsvpData = {
       firstName,
       lastName,
+      email,
+      phone,
       attend: attend!,
       count,
       message,
@@ -165,6 +170,31 @@ export function RsvpForm() {
               {errors.lastName && <FieldError>{errors.lastName}</FieldError>}
             </Field>
           </NameRow>
+
+          <ContactRow>
+            <Field>
+              <Label htmlFor="email">Email Address</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="e.g. margaret@email.com"
+                autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </Field>
+            <Field>
+              <Label htmlFor="phone">Phone Number</Label>
+              <Input
+                id="phone"
+                type="tel"
+                placeholder="e.g. 07700 900000"
+                autoComplete="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </Field>
+          </ContactRow>
 
           <Field>
             <Label>Will You Join Us?</Label>

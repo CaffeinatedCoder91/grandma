@@ -35,6 +35,11 @@ export const memorial = {
     title: "Remembrance",
     description: "Following the service, you are invited to join us for refreshments at a local venue (details will be shared here once confirmed).",
   },
+  flowers: {
+    eyebrow: "Her Flowers",
+    title: "White Lilies & Red Roses",
+    body: "Maseline adored white lilies and red roses. If you'd like to bring flowers or wear one in her honour, she would have loved that.",
+  },
   dressCode:
     "Please note formal black funeral attire is not necessary",
   rsvp: {

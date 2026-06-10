@@ -16,6 +16,8 @@ export async function submitRsvp(data: RsvpData): Promise<void> {
     body: JSON.stringify({
       firstName: data.firstName,
       lastName: data.lastName,
+      email: data.email,
+      phone: data.phone,
       attendance: data.attend,
       guests: data.count,
       message: data.message,

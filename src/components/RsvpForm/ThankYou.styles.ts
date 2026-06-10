@@ -34,12 +34,12 @@ export const CheckmarkIcon = styled.div`
 
   &::after {
     align-items: center;
-    background: ${({ theme }) => theme.colors.roseMist};
+    background: ${({ theme }) => theme.colors.roseBright};
     border: 3px solid ${({ theme }) => theme.colors.rose};
     border-radius: 50%;
     box-shadow: inset 0 0 0 3px ${({ theme }) => theme.colors.rose};
     color: ${({ theme }) => theme.colors.rose};
-    content: "✓";
+    content: "🌹";
     display: flex;
     font-size: 36px;
     font-weight: 600;

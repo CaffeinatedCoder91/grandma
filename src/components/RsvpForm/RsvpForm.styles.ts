@@ -65,6 +65,16 @@ export const NameRow = styled.div`
   }
 `;
 
+export const ContactRow = styled.div`
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 export const Field = styled.div`
   display: flex;
   flex-direction: column;
