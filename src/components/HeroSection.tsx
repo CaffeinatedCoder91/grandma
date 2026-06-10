@@ -11,6 +11,7 @@ const Hero = styled.header`
   padding: 88px 0 80px;
   position: relative;
   text-align: center;
+  width: 100%;
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
     padding: 56px 0;
