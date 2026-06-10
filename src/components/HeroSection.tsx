@@ -46,7 +46,7 @@ const PortraitWrap = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    height: 380px;
+    height: 480px;
     width: 380px;
   }
 `;
@@ -66,7 +66,7 @@ const PortraitFrame = styled.div`
   z-index: 1;
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    height: 380px;
+    height: 480px;
     width: 380px;
   }
 `;
@@ -80,7 +80,7 @@ const PortraitImage = styled.img`
   width: 550px;
 
   @media (max-width: ${({ theme }) => theme.layout.mobileBreakpoint}) {
-    height: 380px;
+    height: 480px;
     width: 380px;
   }
 `;
