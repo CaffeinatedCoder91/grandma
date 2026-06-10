@@ -23,7 +23,6 @@ const OrnamentWrap = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 6px;
-  min-height: 64px;
 `;
 
 const PortraitWrap = styled.div`
